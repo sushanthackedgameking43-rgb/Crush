@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08080d" />
+  <title>For Ritika — A Little Something</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="stars" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero screen" id="home">
+      <div class="orb"></div>
+      <p class="eyebrow reveal">A small secret • made with care</p>
+      <h1 class="reveal delay-1">For <span>Ritika</span></h1>
+      <p class="hero-copy reveal delay-2">
+        Some things are easier to put into a little corner of the internet
+        than into a conversation.
+      </p>
+      <button class="glow-btn reveal delay-3" id="beginBtn">
+        <span>Enter the story</span><i>↗</i>
+      </button>
+      <p class="tiny reveal delay-3">Best experienced with sound on — but totally optional.</p>
+    </section>
+
+    <section class="chapter" id="chapter1">
+      <div class="chapter-inner">
+        <span class="chapter-no">01</span>
+        <p class="eyebrow">A thought</p>
+        <h2>There is a reason<br><em>this page exists.</em></h2>
+        <div class="line"></div>
+        <p class="body-copy">
+          Every now and then, someone quietly becomes a little more special
+          than everyone else. No dramatic explanation. It just happens.
+        </p>
+        <button class="text-btn next-btn" data-next="chapter2">Continue <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="chapter dark" id="chapter2">
+      <div class="chapter-inner">
+        <span class="chapter-no">02</span>
+        <p class="eyebrow">The little things</p>
+        <h2>It's the details<br>that stay.</h2>
+        <div class="memory-grid">
+          <button class="memory-card" data-message="The moments that make an ordinary day feel a little less ordinary.">
+            <span>✦</span><strong>Moments</strong><small>the unexpected ones</small>
+          </button>
+          <button class="memory-card" data-message="A smile, a laugh, a simple conversation — tiny things can leave surprisingly big impressions.">
+            <span>◌</span><strong>Details</strong><small>the ones worth noticing</small>
+          </button>
+          <button class="memory-card" data-message="Some people simply have a way of making the world around them feel brighter.">
+            <span>☾</span><strong>Presence</strong><small>quietly memorable</small>
+          </button>
+        </div>
+        <p class="tap-hint">Tap the cards ✦</p>
+        <button class="text-btn next-btn" data-next="chapter3">One more thing <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="chapter" id="chapter3">
+      <div class="chapter-inner centered">
+        <span class="chapter-no">03</span>
+        <p class="eyebrow">No guessing games</p>
+        <h2>Okay, enough<br><em>mystery.</em></h2>
+        <p class="body-copy">
+          I made this because there was something I wanted to say honestly,
+          without putting you on the spot.
+        </p>
+        <button class="reveal-btn" id="revealBtn">
+          <span class="lock">⌁</span>
+          <span>Open the final page</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="confession" id="confession">
+      <div class="confession-inner">
+        <p class="eyebrow">The secret</p>
+        <h2>Ritika,</h2>
+        <p class="confession-text">
+          I like you. ❤️
+        </p>
+        <p class="body-copy">
+          I've wanted to say that for a while, and this felt like a nicer way
+          to finally be honest about it.
+        </p>
+        <p class="respect">
+          You don't owe me an answer, a reaction, or anything at all.
+          Whatever you feel is completely okay. I just wanted you to know.
+        </p>
+
+        <div class="response-box">
+          <p>If you ever feel like talking about it:</p>
+          <a class="choice" href="javascript:void(0)" id="smileBtn">😊 I'd like to talk</a>
+          <a class="choice soft" href="javascript:void(0)" id="laterBtn">🌙 Maybe another time</a>
+        </div>
+
+        <p class="signature">— from someone who thinks you're pretty special</p>
+        <button class="restart" id="restartBtn">↻ Start again</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="messageModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <span class="modal-icon">✦</span>
+      <p id="modalMessage"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
